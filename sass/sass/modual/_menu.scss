@@ -77,6 +77,9 @@
                 line-height: 2.1em;
                 white-space: nowrap;
                 color: $menuTxt;
+                @media screen and (max-width: 62.5rem) {
+                    padding: 0 .5em;
+                }
             }
             &.hasChild {
                 >a {
