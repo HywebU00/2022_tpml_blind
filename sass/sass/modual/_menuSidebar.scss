@@ -70,10 +70,13 @@ $menuItems: 15;
         .megamenu {
             width: 90%;
             margin: 0 auto 1em;
+            position: relative;
+            top:0em;
+            border-radius: 8px;
             a {
                 display: block;
                 color: #fff;
-                font-size: 0.938em;
+                font-size: 1.125em;
                 text-decoration: none;
                 transition: 0.3s $cubic;
                 text-align: left;

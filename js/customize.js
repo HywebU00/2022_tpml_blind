@@ -210,14 +210,25 @@ $(function() {
     _navlistChild.find('.text_contrast li:last>a').focusout(function() {
         $(this).parents('.readset').hide();
     });
+    $('.close_btn').click(function() {
+        $(this).parent('.readset').hide();
+    })
+
 
 // 點外面關閉share
-$(document).on('touchend click', function(e) {
-    var container = $('.header .mpfun');
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-        $('.header .mpfun .readset').hide();
-    }
-});
+    $(document).on('touchend click', function(e) {
+        var container = $('.header .mpfun');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            $('.header .mpfun .readset').hide();
+        }
+    });
 
 });
+
+//readset close
+// $('[class*="readset"] button.close_btn').click(function(e) {
+//     $(this).parent('[class*="readset"]').hide();
+//     e.preventDefault();
+// });
+
 

@@ -42,12 +42,14 @@ $(function() {
     _overlay = $('.menu_overlay'),
     _mArea = $('.m_area');
     _sidebarCtrl.append('<span></span><span></span><span></span>');
+    _mpfun = $('.mpfun');
     // -------------------------------------------- 打開選單 function
     function showSidebar() {
         _sidebar.show();
         _mArea.show().addClass('open');
         _mArea.animate({ 'margin-left': 0 }, 400, 'easeOutQuint');
         _body.addClass('noscroll');
+        $('.m_area .menu li:first-child>a').focus();//跳進行動版選單
         _overlay.fadeIn();
         $('.m_search').hide();
         search_mode = false;
@@ -67,6 +69,7 @@ $(function() {
     _sidebarCtrl.off().click(function(e) {
         showSidebar();
         e.preventDefault();
+
     });
     // -------------------------------------------- overlay關閉選單
     _overlay
@@ -76,7 +79,12 @@ $(function() {
         hideSidebar();
     });
     _overlay.off('mouseenter');
-    // -------------------------------------------- 無障礙tab設定
+    // -------------------------------------------- 無障礙tab設定，手機版menu離開最後一個選項後關閉
+    _mArea.find('.sidebarClose').focusout(function() {
+        hideSidebar();
+        $('h1>a').focus();
+    });
+    _overlay.off("mouseenter");
     // -------------------------------------------- menu
     liHasChild.children('a').keyup(function() {
         $(this).siblings('ul').fadeIn();
@@ -115,10 +123,14 @@ $(function() {
     });
 
     // 先複製過去
-    _nav.clone().prependTo(_mArea);
+    // _nav.clone().prependTo(_mArea);
     _menu.clone().prependTo(_mArea);
     _megamenu.clone().prependTo(_mArea);
     _search.clone().prependTo(_body).removeClass('search').addClass('m_search');
+    _nav.clone().appendTo($('.m_search'));
+    $( ".m_search .font_size" ).after( $( ".m_search .navlist" ) );
+    $( ".searchCtrl" ).before( $( "h1" ) );
+
     var liHasChild_level1 = $('aside .menu ul').children('li.hasChild'),
     liHasChild_level2 = $('aside .menu ul ul').children('li.hasChild'),
     liHasChild_level3 = $('aside .menu ul ul ul').children('li.hasChild'),
@@ -216,6 +228,11 @@ $(function() {
             _body.off('touchmove');
             $('.m_search').hide();
             $('.language').find('ul').hide();
+            //sclose_btn
+            $('.sclose_btn').click(function() {
+                $(this).parent('.m_search').hide();
+            })
+
         } else {
             /*-----------------------------------*/
             /////////////// PC版設定 /////////////
@@ -511,8 +528,8 @@ $(function() {
     .click(function(e) {
         $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
             // $('a.goCenter').focus(); //加入這行
-            e.preventDefault();
-        });
+        e.preventDefault();
+    });
     $('.scrollToTop').keydown(function(e) {
         $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
         _body.find('a.goCenter').focus();

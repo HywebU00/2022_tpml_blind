@@ -115,6 +115,34 @@ kbd{
     }
 }
 @include screen('mobile') {
-    display: none;
+    // display: none;
+    position: relative;
+    right: 0;
+    left:0;
+    top:1em;
+    flex:1 1 100%;
+    justify-content:center; 
+    ul{
+        font-size: 1.25em;
+        li{
+            a{
+                line-height: 44px;
+                width: 44px;
+                height: 44px;
+                &:hover, &:focus {
+                    background: $linkColor;
+                    color: #FFF;
+                }
+                &.active {
+                    background: $linkColor;
+                    color: #FFF;
+                    &:hover, &:focus {
+                        background: $linkColor;
+                        color: #FFF;
+                    }
+                } 
+            }
+        }
+    }
 }
 }

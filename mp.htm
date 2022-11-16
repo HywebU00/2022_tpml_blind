@@ -1,13 +1,13 @@
 <!doctype html>
-    <html lang="zh-Hant" class="no-js">
+<html lang="zh-Hant" class="no-js">
 
-    <head>
-        <meta name="robots" content="noindex">
-        <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>HyUI kit</title>
+<head>
+    <meta name="robots" content="noindex">
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -32,6 +32,9 @@
         <header class="header">
             <div class="container">
                 <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <h1>
+                    <a href="index.htm"><img src="images/logo.svg" alt="臺北市立圖書館 視障電子圖書館"></a>
+                </h1>
                 <!-- navigation Start -->
                 <nav class="navigation" role="navigation" aria-label="Site">
                     <!-- 新增div navlist -->
@@ -48,7 +51,7 @@
                         <ul aria-label="login">
                             <li class="myname">歡迎，劉佳淇</li>
                             <li><a href="#">進入個人書房</a></li>
-                            <li><a href="#">登出</a></li>
+                            <li class="logout_btn"><a href="#">登出</a></li>
                             <li><a href="#">自訂顏色</a>
                                 <!-- readset star -->
                                 <div class="readset">
@@ -96,11 +99,10 @@
                     </div>
                 </nav>
                 <!-- navigation End -->
-                <h1>
-                    <a href="index.htm"><img src="images/logo.svg" alt="臺北市立圖書館 視障電子圖書館"></a>
-                </h1>
+
                 <!-- Search Start -->
                 <div class="search" role="search">
+                    <button type="button" class="btn sclose_btn" aria-label="Close" onclick="">關閉</button>
                     <div class="form_grp">
                         <label for="mustSameAsId">站內全文檢索</label>
                         <input name="username" id="mustSameAsId" type="text" placeholder="請輸入查詢關鍵字" accesskey="S" aria-label="搜尋網站內容">
@@ -182,17 +184,19 @@
 
                 <!-- booksearch star -->
                 <section class="booksearch">
-                   <div class="container">
+                 <div class="container">
                     <div class="flex-4-8">
-                       <div class="Flex-set">
+                     <div class="Flex-set">
                         <div class="col">
                             <h2 id="booksearch-label">圖書查詢</h2>
-                            <h2><a href="#" target="_blank" title="分類瀏覽-另開視窗">分類瀏覽</a></h2>
-                            <h2><a href="#" target="_blank" title="資料類型瀏覽-另開視窗">資料類型瀏覽</a></h2>
-                            <h2><a href="#" target="_blank" title="主題瀏覽-另開視窗">主題瀏覽</a></h2>
+                            <ul class="browselink" aria-label="browselink">
+                                <li><a href="#" target="_blank" title="分類瀏覽-另開視窗">分類瀏覽</a></li>
+                                <li><a href="#" target="_blank" title="資料類型瀏覽-另開視窗">資料類型瀏覽</a></li>
+                                <li><a href="#" target="_blank" title="主題瀏覽-另開視窗">主題瀏覽</a></li>
+                            </ul>
                         </div>
                         <div class="col">
-                            <form aria-labelledby="booksearch-label">
+                            <form aria-labelledby="booksearch-label" class="booksearchform">
                               <!-- Search Start -->
                               <div class="flex-form skeyword">
                                 <div class="form_grp">

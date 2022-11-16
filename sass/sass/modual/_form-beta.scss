@@ -53,6 +53,7 @@ select::-ms-expand {
     display: none;
 }
 
+
 .labelEffect {
     // margin-left: 1%;
     &+.labelEffect {}
@@ -235,14 +236,16 @@ select::-ms-expand {
     // 表單的線 ----------------------- start
     // border-top: 1px solid #DDD;
     .form_grp {
-        border-bottom: 1px dashed #DDD;
+        // border-bottom: 1px dashed #DDD;
         padding: .5em 0;
         // &:last-child{
         //     border-bottom: transparent;  // 最後一筆不要下虛線
         // }
+
+        input::placeholder {color:$color-word;}
     }
     &.form_inline {
-        border-bottom: 1px dashed #DDD;
+        // border-bottom: 1px dashed #DDD;
         .form_grp {
             border-bottom: 0;
             .form_title {
@@ -1634,6 +1637,8 @@ abbr[title] {
         }
     }
 }
+
+
 
 @keyframes ripple {
     100% {
