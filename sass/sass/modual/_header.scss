@@ -259,7 +259,7 @@ label {
         color:$color-word;
         &[type='submit'] {
             min-width: auto;
-            padding: 0.48em 0.8em;
+            padding: 0.4em 0.8em;
         }
         &:focus {
             box-shadow: 0 0px 0px 2px $aFocus;
@@ -269,7 +269,7 @@ label {
     .btn,
     .btn-search {
         min-width: auto;
-        padding: 0.48em 0.8em;
+        padding: 0.4em 0.8em;
         margin: 0;
         background: rgb(255,218,122);
         background: -moz-linear-gradient(180deg, rgba(255,218,122,1) 0%, rgba(255,200,60,1) 55%);

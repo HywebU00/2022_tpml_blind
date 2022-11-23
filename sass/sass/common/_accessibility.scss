@@ -14,7 +14,7 @@
     top: 5px;
     left: 5px;
     z-index: 9;
-    color: $color-word;
+    color: rgba(255, 255, 255, 1);
     font-size: $font-size;
     @include screen("mobile") {
         display: none;
@@ -23,6 +23,8 @@
 .main{
     .accesskey {
         top: 0;
+        left:auto;
+        color: $color-word;
     } 
 }
 

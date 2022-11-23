@@ -20,13 +20,13 @@
         &:hover,
         &:focus {
             color: #FFF;
-            background: darken($primaryColor, 15);
-            border: 1px solid darken($primaryColor, 15);
+            background: darken($primaryColor, 0);
+            border: 1px solid darken($primaryColor, 0);
             box-shadow: none;
         }
         &.active {
             color: #FFF;
-            @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
+            @include gradient(darken($primaryColor, 0), darken($primaryColor, 5), vertical);
         }
         span {
             font-size: .813em;
@@ -39,5 +39,9 @@
                 display: inline-block;
             }
         }
+    }
+    .title{
+        float: left;
+        padding: .4em 0;
     }
 }

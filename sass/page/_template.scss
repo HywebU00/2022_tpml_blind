@@ -49,12 +49,12 @@ body {
     margin: 0 auto;
     padding-top: 40px;
     >.container {
-       margin: 0 auto;
-       width: 92%; 
-   }
-   @include screen('mobile') {
-       padding-top: 90px;
-   }
+        margin: 0 auto;
+        padding: 0 4%;
+    }
+    @include screen('mobile') {
+     padding-top: 90px;
+ }
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
     h2 {
         line-height: 1.25em;
@@ -65,13 +65,15 @@ body {
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     >.container {
-        @include gutter(); //gutter 代表左右要留白
+        // @include gutter(); //gutter 代表左右要留白
         display: flex;
+        padding-bottom: 1em;
     }
     .center_block {
         flex: none;
         flex-basis: 100%;
         max-width: 100%;
+        padding: 0 3%;
     }
     .left_block {
         flex: none;
