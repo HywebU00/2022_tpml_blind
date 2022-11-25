@@ -285,3 +285,89 @@ h3{
     }
 }
 }
+
+//search_list
+.search_list{
+
+    margin: 0 0 1em;
+    table{
+        caption{
+            display: none;
+        }
+        th{
+            text-align: left;
+        }
+    }
+    .num{
+        text-align: center;
+        @include screen('mobile') {
+            text-align: left;
+        }
+    }
+}
+
+//fold
+.fold{
+    .fold_btn {
+        color: $color-white;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        padding: .3em 1.5em .3em 0;
+        font-size: 1rem;
+        position: relative;
+        border-radius: 5px;
+        &:after {
+          content: "";
+          border: 2px solid $color-white;
+          border-top: none;
+          border-left: none;
+          position: absolute;
+          top: .7em;
+          right: .5em;
+          width: 8px;
+          height: 8px;
+          transform: rotate(45deg);
+          transition: transform 0.5s;
+      }
+  }
+
+  .fold_box{
+      display: none;
+  }
+
+}
+
+//login
+.login{
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    padding: .5em 2em 1em;
+    margin: 1em 0;
+    @include screen('mobile') {
+     padding: 1em;   
+ }
+ .robert{
+    text-align: center;
+    width: 100%;
+    img{
+        width: 100%;
+        max-width: 400px;
+    }
+}
+.notice{
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.6em;
+    a{
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;  
+      }
+  }
+}
+}
+
+//register
+.register{
+
+}

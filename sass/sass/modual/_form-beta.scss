@@ -4,7 +4,7 @@ $m-gutter: 4px; // Flex grid system default margin
     color: $f_color;
     font-size: 1em;
     border: 1px solid $f_border;
-    padding: .6em .5em;
+    padding: .8em .5em;
     background: #fff;
     vertical-align: middle;
     margin: .3em;
@@ -220,12 +220,12 @@ select::-ms-expand {
 
 // 表單必填
 .necessary {
-    font-size: .875rem;
+    // font-size: .875rem;
     color: $color-red;
-    padding: 1px 6px;
+    padding: 1px 0;
     border-radius: 2px;
     margin: 0 6px 0 0;
-    box-shadow: 0 0 0 1px $color-red inset;
+    // box-shadow: 0 0 0 1px $color-red inset;
 }
 
 .form_grid {}
@@ -269,25 +269,54 @@ select::-ms-expand {
         }
         // 電話專屬
         .tel {
-            input[type="text"]:first-child,
-            input[type="tel"]:first-child {
-                background: url(../images/icon/icon_add.svg) no-repeat .5em center;
-                background-size: 12px;
-                padding-left: 1.5em;
+            input[type="tel"] {
+                &.area{
+                    // width: 5em!important;
+                    background: url(../images/icon/icon_add.svg) no-repeat .5em center;
+                    background-size: 12px;
+                    padding-left: 1.5em;
+                    flex: 0 0 5em;
+                    clear: left;
+
+                }
+
             }
-            input[type="text"]:first-child,
-            select:first-child,
-            input[type="tel"]:first-child {
-                width: 100px !important;
-                &~input {
-                    width: calc(100% - 120px);
-                    @include screen('xs_mobile') {
-                        width: 100% !important;
-                        display: block !important;
+            input[type="tel"] {
+                &.extension{
+                    flex: 0 0 5em;
+                }
+
+            }
+            input[type="tel"] {
+                &.officetel{
+                    // width: calc(100% - 20em)!important;
+                    flex: 1 1 calc(100% - 16em);
+                    @include screen('mobile') {
+                        flex: 1 1 calc(100% - 16em); 
                     }
                 }
+
             }
+            input[type="tel"] {
+                &.hometel{
+                    // width: calc(100% - 20em)!important;
+                    flex: 1 1 calc(100% - 10em);
+                    @include screen('mobile') {
+                        flex: 1 1 calc(100% - 7em); 
+                    }
+                }
+
+            }
+            input[type="tel"] {
+                &.phonetel{
+                    // width: calc(100% - 20em)!important;
+                    flex: 1 1 100%;
+                }
+
+            }
+
         }
+
         // 生日專屬
         .birthday {
             select {
@@ -328,7 +357,7 @@ select::-ms-expand {
                 // flex: 1 1 auto;
                 &.user_typing {
                     flex: 1 1 auto;
-                    width: calc(100% - 240px) !important; //自行輸入地址的欄位
+                    width: calc(100% - 20em) !important; //自行輸入地址的欄位
                 }
                 @include screen('mobile') {
                     display: block !important;
@@ -339,6 +368,106 @@ select::-ms-expand {
                 }
             }
         }
+        // 姓名專屬
+        .username {
+            input[type="text"] {
+                //width: calc(100% - 231px) !important;
+                // flex: 1 1 auto;
+                &.user_typing {
+                    flex: 1 1 auto;
+                    width: calc(100% - 240px) !important; 
+                }
+                @include screen('mobile') {
+                    display: block !important;
+                    width: calc(100% - .6em) !important;
+                    &.user_typing {
+                        width: 100% !important;
+                    }
+                }
+            }
+            .radio_grp{
+                width: auto;
+                min-width: 12em;
+            }
+        }
+        // 身分證字號
+        .idnumber {
+            input[type="text"] {
+                //width: calc(100% - 231px) !important;
+                // flex: 1 1 auto;
+                &.user_typing {
+                    flex: 1 1 auto;
+                    width: calc(100% - 240px) !important; 
+                }
+                @include screen('mobile') {
+                    display: block !important;
+                    width: calc(100% - .6em) !important;
+                    &.user_typing {
+                        width: 100% !important;
+                    }
+                }
+            }
+            .acheck{
+                min-width: 12em;
+                position: relative;
+                padding: .8em 0 .8em 2em;
+                color:$color-green;
+                &:before{
+                    content:'';
+                    width: 1em;
+                    height: 1em;
+                    background: url('../images/icon/icon_check_green.svg')no-repeat center center;
+                    box-sizing: 1em auto;
+                    position: absolute;
+                    left:.5em;
+                    top:1.15em;
+                }
+            }
+        }
+        // 密碼
+        .userpwd {
+            input[type="text"] {
+                &.user_typing {
+                    flex: 1 1 auto;
+                    width: calc(100% - 240px) !important; 
+                }
+                @include screen('mobile') {
+                    display: block !important;
+                    width: calc(100% - .6em) !important;
+                    &.user_typing {
+                        width: 100% !important;
+                    }
+                }
+            }
+            .acheck{
+                width: 100%;
+                ul{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        padding: 0 0 0 2em;
+                        position: relative;
+                        &.check{
+                            color:$color-green;
+                            &:before{
+                                content:'';
+                                width: 1em;
+                                height: 1em;
+                                background: url('../images/icon/icon_check_green.svg')no-repeat center center;
+                                box-sizing: 1em auto;
+                                position: absolute;
+                                left:.5em;
+                                top:.2em;
+                            }      
+                        }
+
+                    }
+                }
+
+            }
+        }
+
         // 日期專屬
         .datepick {
             position: relative;
@@ -502,6 +631,7 @@ select::-ms-expand {
                     input[type="tel"],
                     select,
                     .checkbox {
+                        border: solid 1px #c00;
                         width: auto;
                         min-width: 100px;
                         display: inline-block;
@@ -1206,7 +1336,7 @@ select::-ms-expand {
         align-items: center;
         &~input,
         &~textarea {
-            width: auto;
+            // width: auto;
             vertical-align: middle;
         }
     }
@@ -1436,8 +1566,8 @@ input[type="checkbox"]:checked,
 input[type="checkbox"]:focus,
 input[type="radio"]:checked,
 input[type="radio"]:focus {
-    border-color: $form-focus;
-    background-color: $form-focus;
+    // border-color: $form-focus;
+    background-color: $form-btn;
     outline: none;
 }
 
@@ -1451,18 +1581,18 @@ input[type="checkbox"]:checked {
 }
 
 input[type="radio"]:checked {
-    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 2px;
+    box-shadow: #fff 0 0 0 2px inset, $form-focus 0 0 0 2px;
 }
 
 input[type="radio"]:focus {
     border-color: $form-focus;
-    background-color: $form-focus;
-    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 2px;
+    // background-color: $form-focus;
+    // box-shadow: #fff 0 0 0 2px inset, $form-focus 0 0 0 2px;
 }
 
 input[type="checkbox"]:focus {
-    border-color: $form-focus;
-    background-color: $form-focus;
+    // border-color: $form-focus;
+    // background-color: $form-focus;
     box-shadow: $form-focus 0 0 0 2px;
 }
 
@@ -1490,19 +1620,55 @@ input[type="checkbox"]:focus {
         background: transparent;
         color: #666;
     }
+    .check_file{
+        width: 5.15em;
+    }
     .upload_btn {
         position: absolute;
         overflow: hidden;
         top: 10px;
         right: .5em;
-        @extend %btn;
-        @include btn_setting($form-focus, #FFF);
+        // @extend %btn;
+        // @include btn_setting($form-btn, #FFF);
         padding: .2em 1em !important;
         border-radius: 4px;
         &:hover,
         &:focus {
             cursor: pointer !important;
+
         }
+    }
+    .upload_file{
+        padding: .3em .5em;
+    }
+    .pic{
+        width: 90%;
+        position: relative;
+        margin: 1em auto;
+        position: relative;
+        @include aspect-ratio(4, 3);
+        background: #F1F1F1 url('../images/icon/icon_add.svg')no-repeat center center;
+        background-size: 3em auto;
+
+        img{
+            position: absolute;
+            width: 100% !important;
+            height: 100% !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+    .txtint{
+        position: absolute;
+        bottom: 4em;
+        left:0;
+        right:0;
+        text-align: center;
+        z-index: 0;
+        font-size: .938em;
     }
 }
 
@@ -1510,12 +1676,31 @@ input[type="file"] {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 0;
+    margin: 0!important;
     padding: 0;
-    font-size: 1.25em;
+    font-size: 1em;
     cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
+    // @extend %btn;
+    // @include btn_setting($form-btn, #FFF);
+    // padding: .2em 1em !important;
+    border-radius: 4px;
+    border: none;
+    // opacity: 0;
+    filter: alpha(opacity=1);
+    color:#fff;
+    &:focus{
+        box-shadow: 0 0 0 2px #c00 inset;
+    }
+}
+
+//手冊上傳
+.userupload{
+    .upload_grp{
+        flex: 0 1 50%;
+        @include screen('tablet') {
+            flex: 1 1 100%;
+        }
+    }
 }
 
 //---------------------------------------------錯誤--------//
@@ -1611,7 +1796,7 @@ abbr[title] {
         position: absolute;
         padding: .2em 0 !important;
         left: .5em;
-        top: .6em;
+        top: .8em;
         background: none;
         border-right: 1px solid $color-gray;
         width: 2.4em;
@@ -1624,11 +1809,11 @@ abbr[title] {
         //     left: .2em;
         // }
         &+input {
-            padding: .5em .5em .5em 3em;
+            padding: .8em .5em .8em 3em;
         }
     }
     input {
-        padding: .5em 3em .5em .5em;
+        padding: .8em 3em .8em .5em;
         &+i {
             border-right: none;
             border-left: 1px solid $color-gray;

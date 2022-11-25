@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- 燈箱facybox -->
     <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- carousel -->
+    <link rel="stylesheet" type="text/css" href="vendor/carousel/carousel-prev-next.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
@@ -169,205 +171,153 @@
         </header>
         <!-- header End -->
         <!-- main Start -->
-        <main id="center" class="main">
+        <main id="center" class="main innerpage">
             <div class="container">
                 <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-                <!-- breadcrumb路徑 -->
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <ul>
-                        <li><a href="#">首頁</a></li>
-                        <li><a href="#">節點</a></li>
-                        <li aria-current="page">節點</li>
-                    </ul>
-                </nav>
-                <!-- breadcrumb路徑 end-->
-
-                <!-- booksearch star -->
-                <section class="booksearch">
-                   <div class="container">
-                    <div class="flex-4-8">
-                       <div class="Flex-set">
-                        <div class="col">
-                            <h2 id="booksearch-label">圖書查詢</h2>
-                            <ul class="browselink" aria-label="browselink">
-                                <li><a href="#" target="_blank" title="分類瀏覽-另開視窗">分類瀏覽</a></li>
-                                <li><a href="#" target="_blank" title="資料類型瀏覽-另開視窗">資料類型瀏覽</a></li>
-                                <li><a href="#" target="_blank" title="主題瀏覽-另開視窗">主題瀏覽</a></li>
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- breadcrumb路徑 -->
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li aria-current="page">會員登入</li>
+                        </ul>
+                    </nav>
+                    <!-- breadcrumb路徑 end-->
+                    <h2 class="title" id="h2-label">會員登入</h2>
+                    <!-- function功能區塊 -->
+                    <div class="function_panel">
+                        <div class="function">
+                            <ul>
+                                <li class="back"><a href="javascript:history.back()">上一頁</a></li>
                             </ul>
                         </div>
-                        <div class="col">
-                            <form aria-labelledby="booksearch-label" class="booksearchform">
-                              <!-- Search Start -->
-                              <div class="flex-form skeyword">
-                                <div class="form_grp">
-                                    <label for="username">關鍵字:</label>
-                                    <input name="username" type="text" title="請輸入關鍵字" placeholder="請輸入關鍵字">
-                                </div>
-                                <div class="radio_grp form_inline">
-                                    <label tabindex="0"><input name="radioSample" type="radio" value="" checked="" title="國字輸入">國字輸入</label>
-                                    <label tabindex="0"><input name="radioSample" type="radio" value="" title="點字輸入">點字輸入</label>
-                                </div>
-                            </div>
-                            <div class="flex-form selbox">
-                                <div class="form_grp">
-                                    <label for="selectSample">資料類型</label>
-                                    <select name="" id="selectSample" aria-label="請選擇資料類型">
-                                        <option value="">請選擇</option>
-                                        <option value="">選項二</option>
-                                        <option value="">選項三</option>
-                                        <option value="">選項四</option>
-                                    </select>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="selectSample">類別</label>
-                                    <select name="" id="selectSample" aria-label="請選擇類別">
-                                        <option value="">請選擇</option>
-                                        <option value="">選項二</option>
-                                        <option value="">選項三</option>
-                                        <option value="">選項四</option>
-                                    </select>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="selectSample">館藏地</label>
-                                    <select name="" id="selectSample" aria-label="請選擇館藏地">
-                                        <option value="">請選擇</option>
-                                        <option value="">選項二</option>
-                                        <option value="">選項三</option>
-                                        <option value="">選項四</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="btn_grp">
-                                <input name="" type="submit" value="搜尋" title="搜尋" class="btn btn-submit">
-                                <input name="" type="reset" value="重設" title="重設" class="btn">
-                                <input name="" type="button" value="進階查詢" title="進階查詢" class="btn">
-                            </div>
-                            <!-- Search End -->
-                        </form>
                     </div>
-                </div> 
+                    <!-- function功能區塊end -->
+
+                    <!-- login Start -->
+                    <section class="login" aria-describedby="h2-label">
+                        <div class="flex-form">
+                            <div class="form_grp">
+                                <div class="flex-col-equal-2 form-column">
+                                    <div class="form_grp">
+                                        <label for="username" class="form_title">帳號</label>
+                                        <div class="form_content">
+                                            <div class="input-i">
+                                                <i class="i_man" aria-hidden="true" focusable="false"></i>
+                                                <input type="text" id="username" placeholder="請輸入借閱證號或身分證字號" value="" title="請輸入借閱證號或身分證字號">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="password" class="form_title">密碼</label>
+                                        <div class="form_content">
+                                            <div class="labelEffect password_toggle">
+                                                <div class="input-i">
+                                                    <i class="i_lock" aria-hidden="true" focusable="false"></i>
+                                                    <input name="password" id="password" type="password" placeholder="請輸入密碼" title="請輸入密碼" value="1234">
+                                                </div>
+                                                <button type="button" class="btn btn-icon" aria-label="觀看密碼"><i class="i_hide"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="check_grp">
+                                    <label><input type="checkbox">記住我</label>
+                                </div>
+                                <!-- 機器人 -->
+                                <div class="robert">
+                                    <img src="images/robert.jpg" alt="">
+                                </div>
+                                <!-- note -->
+                                <div class="notice">
+                                    帳號請輸入借閱證號或身分證字號<br>
+                                    密碼請輸入自訂密碼 （預設密碼：生日月日四碼）<br>
+                                    帳號請輸入借閱證號或身分證字號<br>
+                                    若忘了密碼，請至<a href="#">館藏查詢系統</a>修改密碼
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn_grp">
+                            <input name="" type="submit" value="登入" class="btn btn-submit">
+                            <input name="" type="reset" value="返回" class="btn btn-reset">
+                        </div>
+
+                    </section>
+                    <!-- login End -->
+
+                </div>
             </div>
-        </div> 
-    </section>
-    <!-- booksearch end -->
-
-    <!-- onlinedownload star -->
-    <section class="onlinedownload">
-        <div class="container">
-            <h2 id="onlinedownload-label">線上閱讀下載</h2>
-            <ul aria-labelledby="onlinedownload-label">
-                <li class="icon_online01"><a href="#" target="_blank" title="線上有聲書-另開視窗">線上有聲書</a></li>
-                <li class="icon_online02"><a href="#" target="_blank" title="線上點字書-另開視窗">線上點字書</a></li>
-                <li class="icon_online03"><a href="#" target="_blank" title="用心看電影-另開視窗">用心看電影</a></li>
-                <li class="icon_online04"><a href="#" target="_blank" title="啟明之音-另開視窗">啟明之音</a></li>
-                <li class="icon_online05"><a href="#" target="_blank" title="有聲國語日報-另開視窗">有聲國語日報</a></li>
-                <li class="icon_online06"><a href="#" target="_blank" title="線上點字樂譜-另開視窗">線上點字樂譜</a></li>
-                <li class="icon_online07"><a href="#" target="_blank" title="空中故事屋-另開視窗">空中故事屋</a></li>
-            </ul>
-        </div>
-    </section>
-    <!-- onlinedownload end -->
-
-    <!-- news star -->
-    <section class="news">
-        <div class="container">
-            <h2>訊息公吿</h2>
-            <div class="newsbox">
-                <div class="date">2022/9/1</div>
-                <ul class="newslist">
-                    <li>
-                      <a href="#">
-                          <h3>111年5-12月用心看電影活動更動訊息</h3>
-                          <p>5-6月疫情關係，暫停播放。7月至12月電影最新行事曆已公告。</p>
-                      </a>  
-                  </li>
-              </ul>
-              <div class="more"><a href="#">活動訊息一覽</a></div>
-          </div>
-      </div>
-  </section>
-  <!-- news end -->
-
-  <!-- newbook star -->
-  <section class="newbook">
-    <div class="container">
-        <ul>
-            <li><a href="#">新書目錄</a></li>
-            <li><a href="#">好書推薦</a></li>
-            <li><a href="#">熱門下載</a></li>
-        </ul>
+        </main>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+                <div class="footer_logo">
+                    <img src="images/f_logo.svg" alt="臺北市立圖書館logo" class="img-responsive flogo">
+                </div>
+                <div class="footer_info">
+                    <ul class="footer_link">
+                        <li><a href="javascript:;">隱私權及資訊安全政策</a></li>
+                        <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+                        <li><a href="javascript:;">意見信箱</a></li>
+                        <li><a href="javascript:;">滿意度調查</a></li>
+                    </ul>
+                    <p>本網站為建立專屬視障者使用之網站，提供線上有聲書、點字書等資源，供視障者使用</p>
+                    <p>啟明分館地址：臺北市松山區敦化北路155巷76號<br>
+                        電話：(02)2514-8443（詳細業務聯繫電話）｜傳真：(02)2514-8428<br>
+                        電子郵件：<a href="mailto:a15@email.tpml.edu.tw">a15@email.tpml.edu.tw</a><br>
+                        開放時間：週一至週日09:00-17:00｜休館日：每月第一個星期四及國定假日
+                    </p>
+                </div>
+                <div class="footer_icon">
+                    <ul>
+                        <li>
+                            <a target="_blank" href="javascript:;">
+                                <img src="images/taipeilogo.png" alt="臺北市政府,另開新視窗">
+                            </a> 
+                        </li>
+                        <li>
+                            <a target="_blank" href="javascript:;">
+                                <img src="images/accessibility_aaa.jpg" alt="通過AAA優先等級無障礙網頁檢測,另開新視窗">
+                            </a>                        
+                        </li>
+                    </ul>
+                </div>
+                <div class="Copyright">台北市立圖書館版權所有 © 2022 All Rights Reserved.</div>
+                <div class="update">網站最後更新日期：<em>111年09月08日</em></div>
+            </div>
+        </footer>
+        <!-- footer End -->
     </div>
-</section>
-<!-- newbook end -->
-
-</div>
-</main>
-<!-- footer Start-->
-<footer>
-    <div class="container">
-        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
-        <div class="footer_logo">
-            <img src="images/f_logo.svg" alt="臺北市立圖書館logo" class="img-responsive flogo">
-        </div>
-        <div class="footer_info">
-            <ul class="footer_link">
-                <li><a href="javascript:;">隱私權及資訊安全政策</a></li>
-                <li><a href="javascript:;">政府網站資料開放宣告</a></li>
-                <li><a href="javascript:;">意見信箱</a></li>
-                <li><a href="javascript:;">滿意度調查</a></li>
-            </ul>
-            <p>本網站為建立專屬視障者使用之網站，提供線上有聲書、點字書等資源，供視障者使用</p>
-            <p>啟明分館地址：臺北市松山區敦化北路155巷76號<br>
-                電話：(02)2514-8443（詳細業務聯繫電話）｜傳真：(02)2514-8428<br>
-                電子郵件：<a href="mailto:a15@email.tpml.edu.tw">a15@email.tpml.edu.tw</a><br>
-                開放時間：週一至週日09:00-17:00｜休館日：每月第一個星期四及國定假日
-            </p>
-        </div>
-        <div class="footer_icon">
-            <ul>
-                <li>
-                    <a target="_blank" href="javascript:;">
-                        <img src="images/taipeilogo.png" alt="臺北市政府,另開新視窗">
-                    </a> 
-                </li>
-                <li>
-                    <a target="_blank" href="javascript:;">
-                        <img src="images/accessibility_aaa.jpg" alt="通過AAA優先等級無障礙網頁檢測,另開新視窗">
-                    </a>                        
-                </li>
-            </ul>
-        </div>
-        <div class="Copyright">台北市立圖書館版權所有 © 2022 All Rights Reserved.</div>
-        <div class="update">網站最後更新日期：<em>111年09月08日</em></div>
-    </div>
-</footer>
-<!-- footer End -->
-</div>
-<a href="javascript:;" class="scrollToTop">回頁首</a>
-<!-- JQ -->
-<script src="js/jquery-3.6.0.min.js"></script>
-<!-- 外掛 plugin js -->
-<script src="vendor/jquery.easing.min.js"></script>
-<!-- ease -->
-<script src="vendor/slick/slick.min.js "></script>
-<!-- slick -->
-<script src="vendor/slick/slick-lightbox.js "></script>
-<!-- slick lightbox -->
-<script src="vendor/lazyload/lazyload.js"></script>
-<!-- lazyload -->
-<script src="vendor/picturefill/picturefill.min.js" async></script>
-<!-- picturefill -->
-<script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
-<!-- scrolltable -->
-<!-- sticky-sidebar -->
-<script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
-<script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
-<!-- fancy -->
-<script src='vendor/fancybox/jquery.fancybox.min.js'></script>
-<!-- hyUI -->
-<script src="js/hyui.js"></script>
-<!-- 客製js -->
-<script src="js/customize.js"></script>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- sticky-sidebar -->
+    <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
+    <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+    <!-- fancy -->
+    <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <!-- carousel -->
+    <script src="vendor/carousel/carousel-prev-next.js"></script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
 </body>
 
 </html>

@@ -246,4 +246,17 @@ _accordionItem.click(accordion3);
 }
 });
 
+//fold收合區塊
+$('.fold').find('div').has('.fold_box').addClass('hasChild');
+var _foldChild = $('.fold').find('div.hasChild');
+$('.fold .fold_btn').click(function() {
+    $(this).siblings('.fold_box').slideToggle();
+})
+// _foldChild.children('button').keyup(function() {
+//     $(this).siblings('.fold_box').fadeIn();
+// });
+_foldChild.find('.selbox').focusout(function() {
+    $(this).parents('.fold_box').hide();
+});
+
 

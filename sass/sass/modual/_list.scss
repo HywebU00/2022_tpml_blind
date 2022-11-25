@@ -106,9 +106,9 @@
     // right: 3.8%;
     // top:5.5em;
     @include screen('tablet') {
-       right: 2%;   
-   }
-   @include screen('mobile') {
+     right: 2%;   
+ }
+ @include screen('mobile') {
     // display: none;
     margin: 0.5em 0;
     right: auto;
@@ -209,8 +209,9 @@ label {
         flex:1 1 auto;
     }
     .function{
-     flex:0 0 10em;
-     @include screen('mobile') {
+       flex:0 0 10em;
+       margin: .8em 0;
+       @include screen('mobile') {
         flex:1 1 auto;
     }
 }

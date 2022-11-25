@@ -72,12 +72,13 @@ a.more {
     border-radius: 15px;
     padding: 2em;
     color:$color-white;
+    position: relative;
     @include screen('mobile') {
         padding: 1em;
     }
     form{
         margin: 0;
-        padding-left: 1em;
+        padding-left: .5em;
         @include screen('mobile') {
           padding-left: 0;  
       }
@@ -89,6 +90,7 @@ a.more {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    margin: 0;
     @include screen('mobile') {
         flex-wrap: wrap;
     }
@@ -99,24 +101,50 @@ a.more {
         flex: 0 0 15em;
         padding-bottom: 1.2em;
         @include screen('mobile') {
-          flex: 1 1 100%;  
+          flex: 1 1 100%;
+          padding-bottom: 0;  
       }
   }
 }
 .selbox {
     display: flex;
     align-items: center;
-    padding: .3em 0;
+    padding: 0;
     @include screen('mobile') {
         flex-wrap: wrap;
     }
 }
-.btn_grp{
+.inputbox {
+    display: flex;
+    align-items: center;
+    padding: .5em;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    background: rgba(0, 0, 0, .3);
+    border-radius: 8px;
+    .form_grp{
+        flex:0 1 33.33%;
+    }
+    @include screen('mobile') {
+        flex-wrap: wrap;
+        .form_grp{
+            flex:0 1 50%;  
+        }
+    }
+    @include screen('xs_mobile') {
+        .form_grp{
+            flex:1 1 auto;  
+        }
+    }
+
+}
+.btn_grp, .btn_grp2{
   display: flex;
   align-items: center;
-  padding: .5em 0 .5em;
+  padding: 0;
   @include screen('mobile') {
     flex-wrap: wrap;
+    padding: .5em 0;
 }
 .btn{
     flex:1 1 30%;
@@ -134,7 +162,7 @@ a.more {
 
 }
 .btn-submit{
-    padding: 0.5em 0.8em;
+    // padding: 0.5em 0.8em;
     background: rgb(255,218,122);
     background: -moz-linear-gradient(180deg, rgba(255,218,122,1) 0%, rgba(255,200,60,1) 55%);
     background: -webkit-linear-gradient(180deg, rgba(255,218,122,1) 0%, rgba(255,200,60,1) 55%);
@@ -153,14 +181,32 @@ a.more {
 
 }
 }
+
+.btn_grp2{
+    justify-content:center;
+    flex-wrap: nowrap;
+    .btn{
+       flex:0 1 30%;
+       font-size: 1.125em;
+       margin-top: 1.6em;
+       @include screen('mobile') {
+        flex:1 1 auto;
+        margin-top: 0;
+    }
+    .btn-submit{
+
+    }
+}
+
+}
 input[type="radio"]:checked {
-    box-shadow: #ffc83c 0 0 0 10px inset, #fff 0 0 0 2px;
+    // box-shadow: #ffc83c 0 0 0 10px inset, $form-btn 0 0 0 2px;
 }
 
 input[type="radio"]:focus {
-    border-color: $color-blue;
-    background-color: $color-blue;
-    box-shadow: #ffc83c 0 0 0 10px inset, #fff 0 0 0 2px;
+    // border-color: $color-blue;
+    // background-color: $color-blue;
+    // box-shadow: $form-focus 0 0 0 10px inset, #fff 0 0 0 2px;
 }
 
 h2{
@@ -192,7 +238,7 @@ h2{
   li{
     font-size: 1.35em;
     font-weight: bold;
-    margin: .4em .5em;
+    margin: .2em .5em;
     @include screen('mobile') {
         margin: .1em 0;  
     }

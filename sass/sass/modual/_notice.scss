@@ -5,7 +5,7 @@
     display: block;
     width: 100%;
     font-size: .938em;
-    color: #666;
+    color: #222;
     // background-color: #f2f2f2;
     position: relative;
     box-sizing: border-box;
@@ -14,7 +14,7 @@
     text-align: left;
     &:before {
         position: absolute;
-        top: 7px;
+        top: 8px;
         left: .25em;
         display: block;
         vertical-align: middle;
