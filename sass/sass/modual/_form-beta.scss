@@ -1701,6 +1701,14 @@ input[type="file"] {
             flex: 1 1 100%;
         }
     }
+    .upload_btn{
+        label{
+            padding: 0;
+        }
+    }
+    .labelhidden{
+        display: none;
+    }
 }
 
 //---------------------------------------------錯誤--------//
