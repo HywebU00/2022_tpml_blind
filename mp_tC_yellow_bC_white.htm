@@ -17,15 +17,13 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- 燈箱facybox -->
     <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
-    <!-- carousel -->
-    <link rel="stylesheet" type="text/css" href="vendor/carousel/carousel-prev-next.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
 
-<body>
+<body class="tC_yellow bC_white">
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -171,38 +169,33 @@
         </header>
         <!-- header End -->
         <!-- main Start -->
-        <main id="center" class="main innerpage">
+        <main id="center" class="main">
             <div class="container">
                 <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-                <!-- 主要內容區 -->
-                <div class="center_block">
-                    <!-- breadcrumb路徑 -->
-                    <nav class="breadcrumb" aria-label="Breadcrumb">
-                        <ul>
-                            <li><a href="#">首頁</a></li>
-                            <li><a href="#">線上閱讀下載</a></li>
-                            <li aria-current="page">線上有聲書</li>
-                        </ul>
-                    </nav>
-                    <!-- breadcrumb路徑 end-->
-                    <h2 class="title" id="h2-label">線上有聲書</h2>
+                <!-- breadcrumb路徑 -->
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">節點</a></li>
+                        <li aria-current="page">節點</li>
+                    </ul>
+                </nav>
+                <!-- breadcrumb路徑 end-->
 
-                    <!-- function功能區塊 -->
-                    <div class="function_panel">
-                        <div class="function">
-                            <ul>
-                                <li class="print"><a href="#">友善列印</a></li>
-                                <li class="keep"><a href="#">收藏</a></li>
-                                <li class="back"><a href="javascript:history.back()">上一頁</a></li>
+                <!-- booksearch star -->
+                <section class="booksearch">
+                   <div class="container">
+                    <div class="flex-4-8">
+                       <div class="Flex-set">
+                        <div class="col">
+                            <h2 id="booksearch-label">圖書查詢</h2>
+                            <ul class="browselink" aria-label="browselink">
+                                <li><a href="#" target="_blank" title="分類瀏覽-另開視窗">分類瀏覽</a></li>
+                                <li><a href="#" target="_blank" title="資料類型瀏覽-另開視窗">資料類型瀏覽</a></li>
+                                <li><a href="#" target="_blank" title="主題瀏覽-另開視窗">主題瀏覽</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <!-- function功能區塊end -->
-
-                    <!-- SP star -->
-                    <section class="sp" aria-describedby="h2-label">
-                        <!-- booksearch2 star -->
-                        <div class="booksearch">
+                        <div class="col">
                             <form aria-labelledby="booksearch-label" class="booksearchform">
                               <!-- Search Start -->
                               <div class="flex-form skeyword">
@@ -215,36 +208,6 @@
                                     <label><input name="radioSample" type="radio" value="" title="點字輸入">點字輸入</label>
                                 </div>
                             </div>
-                            <!-- 展開／收合搜尋欄位 star -->
-                            <div class="fold">
-                                <button type="button" class="fold_btn" aria-expanded="false" aria-controls="search_input">展開／收合搜尋欄位</button>
-                                <div class="fold_box">
-                                    <div class="flex-form inputbox" id="search_input">
-                                        <div class="form_grp">
-                                            <label for="username">書名</label>
-                                            <input name="username" type="text" title="請輸入書名關鍵字" placeholder="請輸入書名關鍵字">
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="username">作者</label>
-                                            <input name="username" type="text" title="請輸入作者關鍵字" placeholder="請輸入作者關鍵字">
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="username">主題</label>
-                                            <input name="username" type="text" title="請輸入主題關鍵字" placeholder="請輸入主題關鍵字">
-                                        </div>
-
-                                        <div class="form_grp">
-                                            <label for="username">叢書名</label>
-                                            <input name="username" type="text" title="請輸入叢書名關鍵字" placeholder="請輸入叢書名關鍵字">
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="username">ISBN</label>
-                                            <input name="username" type="text" title="請輸入ISBN" placeholder="請輸入ISBN">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 展開／收合搜尋欄位 end -->
                             <div class="flex-form selbox">
                                 <div class="form_grp">
                                     <label for="selectSample">資料類型</label>
@@ -273,124 +236,70 @@
                                         <option value="">選項四</option>
                                     </select>
                                 </div>
-
-                                <div class="btn_grp2">
-                                    <input name="" type="submit" value="搜尋" title="搜尋" class="btn btn-submit">
-                                    <input name="" type="reset" value="重設" title="重設" class="btn">
-                                </div>
-
                             </div>
-
+                            <div class="btn_grp">
+                                <input name="" type="submit" value="搜尋" title="搜尋" class="btn btn-submit">
+                                <input name="" type="reset" value="重設" title="重設" class="btn">
+                                <input name="" type="button" value="進階查詢" title="進階查詢" class="btn">
+                            </div>
                             <!-- Search End -->
                         </form>
-
                     </div>
-                    <!-- booksearch2 end -->
-                    <br>
-                    <!-- funbox star -->
-                    <div class="funbox">
-                       <!-- Pagination -->
-                       <div class="pagination">
-                        <form action="" aria-label="pagination">
-                            <div class="form_inline">
-                                <div class="total">目前顯示第<span>16</span>至第<span>30</span>筆資料，共<span>186</span>筆資料，目前在第 <select name="" id="" aria-label="目前頁面">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </select> 頁 <input type="button" value="確定換頁" title="確定換頁" class="btn btn-submit">
-                                <br>
-                                每頁顯示 <select name="" id="" aria-label="每頁顯示">
-                                    <option value="">15</option>
-                                    <option value="">30</option>
-                                    <option value="">45</option>
-                                    <option value="">60</option>
-                                </select> 筆， <input type="button" value="條件切換" title="條件切換" class="btn btn-submit">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <!-- Pagination end-->
-                <!-- function功能區塊 -->
-                <div class="function">
-                    <ul>
-                        <li class="back"><a href="javascript:history.back()">上一頁</a></li>
-                        <li class="next"><a href="javascript:;">下一頁</a></li>
-                    </ul>
-                </div>
-                <!-- function功能區塊end -->
+                </div> 
             </div>
-            <!-- funbox end -->
+        </div> 
+    </section>
+    <!-- booksearch end -->
 
-            <!-- table_list star -->
-            <div class="table_list search_list">
-                <table>
-                    <caption>查詢列表</caption>
-                    <thead>
-                        <tr>
-                            <th width="1%">序號</th>
-                            <th>書名</th>
-                            <th width="20%">作者</th>
-                            <th width="15%">出版社</th>
-                            <th width="10%">資料類型</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-title="序號" class="num">01</td>
-                            <td data-title="書名"><a href="#">搞怪奇聞故事 = Unique of story</a></td>
-                            <td data-title="作者">張愛</td>
-                            <td data-title="出版社">臺北市立圖書館</td>
-                            <td data-title="資料類型">點字書</td>
-                        </tr>
-                        <tr>
-                            <td data-title="序號" class="num">02</td>
-                            <td data-title="書名"><a href="#">孤星淚, 又名, 悲慘世界</a></td>
-                            <td data-title="作者">雨果 (Hugo, Victor-Marie),1802-1885, 文字作者</td>
-                            <td data-title="出版社">臺北市立圖書館</td>
-                            <td data-title="資料類型">有聲書</td>
-                        </tr>
-                        <tr>
-                            <td data-title="序號" class="num">03</td>
-                            <td data-title="書名"><a href="#">胖咪咪變瘦 = Catundra</a></td>
-                            <td data-title="作者">卡格羅夫 (Cosgrove, Stephen),文字作者</td>
-                            <td data-title="出版社"></td>
-                            <td data-title="資料類型">兒童點字書</td>
-                        </tr>
-                        <tr>
-                            <td data-title="序號" class="num">04</td>
-                            <td data-title="書名"><a href="#">半小時媽媽. 益智故事篇</a></td>
-                            <td data-title="作者">三暉圖書公司 製作</td>
-                            <td data-title="出版社">翰輝出版</td>
-                            <td data-title="資料類型">XXDA</td>
-                        </tr>
-                        <tr>
-                            <td data-title="序號" class="num">05</td>
-                            <td data-title="書名"><a href="#">布卡公主的故事. 印地安傳奇, 2</a></td>
-                            <td data-title="作者">九童文化</td>
-                            <td data-title="出版社">九童文化</td>
-                            <td data-title="資料類型">雙視圖書</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- table_list end -->
+    <!-- onlinedownload star -->
+    <section class="onlinedownload">
+        <div class="container">
+            <h2 id="onlinedownload-label">線上閱讀下載</h2>
+            <ul aria-labelledby="onlinedownload-label">
+                <li class="icon_online01"><a href="#" target="_blank" title="線上有聲書-另開視窗">線上有聲書</a></li>
+                <li class="icon_online02"><a href="#" target="_blank" title="線上點字書-另開視窗">線上點字書</a></li>
+                <li class="icon_online03"><a href="#" target="_blank" title="用心看電影-另開視窗">用心看電影</a></li>
+                <li class="icon_online04"><a href="#" target="_blank" title="啟明之音-另開視窗">啟明之音</a></li>
+                <li class="icon_online05"><a href="#" target="_blank" title="有聲國語日報-另開視窗">有聲國語日報</a></li>
+                <li class="icon_online06"><a href="#" target="_blank" title="線上點字樂譜-另開視窗">線上點字樂譜</a></li>
+                <li class="icon_online07"><a href="#" target="_blank" title="空中故事屋-另開視窗">空中故事屋</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- onlinedownload end -->
 
-            <!-- function功能區塊 -->
-            <div class="function">
-                <ul>
-                    <li class="back"><a href="javascript:history.back()">上一頁</a></li>
-                    <li class="next"><a href="javascript:;">下一頁</a></li>
-                </ul>
-            </div>
-            <!-- function功能區塊 end-->
+    <!-- news star -->
+    <section class="news">
+        <div class="container">
+            <h2>訊息公吿</h2>
+            <div class="newsbox">
+                <div class="date">2022/9/1</div>
+                <ul class="newslist">
+                    <li>
+                      <a href="#">
+                          <h3>111年5-12月用心看電影活動更動訊息</h3>
+                          <p>5-6月疫情關係，暫停播放。7月至12月電影最新行事曆已公告。</p>
+                      </a>  
+                  </li>
+              </ul>
+              <div class="more"><a href="#">活動訊息一覽</a></div>
+          </div>
+      </div>
+  </section>
+  <!-- news end -->
 
-        </section>
-        <!-- SP end -->
-
-
-
+  <!-- newbook star -->
+  <section class="newbook">
+    <div class="container">
+        <ul>
+            <li><a href="#">新書目錄</a></li>
+            <li><a href="#">好書推薦</a></li>
+            <li><a href="#">熱門下載</a></li>
+        </ul>
     </div>
+</section>
+<!-- newbook end -->
+
 </div>
 </main>
 <!-- footer Start-->
@@ -455,8 +364,6 @@
 <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
 <!-- fancy -->
 <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
-<!-- carousel -->
-<script src="vendor/carousel/carousel-prev-next.js"></script>
 <!-- hyUI -->
 <script src="js/hyui.js"></script>
 <!-- 客製js -->
