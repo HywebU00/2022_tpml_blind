@@ -115,6 +115,73 @@ body{
 .input-i i{
     border-right: solid 1px $color-white;
 }
+.booksearch .flex-4-8 .col:nth-child(2){
+    border-left: solid 1px $color-white;
+}
+.onlinedownload ul li{
+    &.icon_online01 a:before {
+        background: url(../images/icon_online01_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online02 a:before {
+        background: url(../images/icon_online02_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online03 a:before {
+        background: url(../images/icon_online03_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online04 a:before {
+        background: url(../images/icon_online04_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online05 a:before {
+        background: url(../images/icon_online05_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online06 a:before {
+        background: url(../images/icon_online06_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online07 a:before {
+        background: url(../images/icon_online07_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+}
+.function_panel{
+ .function{
+    ul{
+        li{
+            a{
+                &:hover, &:focus {
+                    background: $aHover;
+                    color: #FFF;
+                    &:before { filter: invert(0); }
+                }
+            }
+            &.print{
+                a:before {
+                    background: url(../images/icon/icon_print_w.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.keep{
+                a:before {
+                    background: url(../images/icon/icon_heart_w.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.back{
+                a:before {
+                    background: url(../images/icon/icon_back_w.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}   
+}
+
 
 }
    //黃字
@@ -220,6 +287,74 @@ body{
 .input-i i{
     border-right: solid 1px $color-yellow;
 }
+.booksearch .flex-4-8 .col:nth-child(2){
+    border-left: solid 1px $color-yellow;
+}
+
+.onlinedownload ul li{
+    &.icon_online01 a:before {
+        background: url(../images/icon_online01_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online02 a:before {
+        background: url(../images/icon_online02_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online03 a:before {
+        background: url(../images/icon_online03_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online04 a:before {
+        background: url(../images/icon_online04_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online05 a:before {
+        background: url(../images/icon_online05_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online06 a:before {
+        background: url(../images/icon_online06_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online07 a:before {
+        background: url(../images/icon_online07_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+}
+.function_panel{
+ .function{
+    ul{
+        li{
+            a{
+                &:hover, &:focus {
+                    background: $aHover;
+                    color: #FFF;
+                    &:before { filter: invert(0); }
+                }
+            }
+            &.print{
+                a:before {
+                    background: url(../images/icon/icon_print_y.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.keep{
+                a:before {
+                    background: url(../images/icon/icon_heart_y.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.back{
+                a:before {
+                    background: url(../images/icon/icon_back_y.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}   
+}
+
 
 
 }
@@ -327,6 +462,73 @@ body{
 .input-i i{
     border-right: solid 1px $color-lime;
 }
+.booksearch .flex-4-8 .col:nth-child(2){
+    border-left: solid 1px $color-lime;
+}
+.onlinedownload ul li{
+    &.icon_online01 a:before {
+        background: url(../images/icon_online01_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online02 a:before {
+        background: url(../images/icon_online02_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online03 a:before {
+        background: url(../images/icon_online03_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online04 a:before {
+        background: url(../images/icon_online04_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online05 a:before {
+        background: url(../images/icon_online05_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online06 a:before {
+        background: url(../images/icon_online06_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online07 a:before {
+        background: url(../images/icon_online07_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+}
+.function_panel{
+ .function{
+    ul{
+        li{
+            a{
+                &:hover, &:focus {
+                    background: $aHover;
+                    color: #FFF;
+                    &:before { filter: invert(0); }
+                }
+            }
+            &.print{
+                a:before {
+                    background: url(../images/icon/icon_print_g.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.keep{
+                a:before {
+                    background: url(../images/icon/icon_heart_g.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.back{
+                a:before {
+                    background: url(../images/icon/icon_back_g.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}   
+}
+
 
 }
 
@@ -433,6 +635,73 @@ body{
 .input-i i{
     border-right: solid 1px $color-black;
 }
+.booksearch .flex-4-8 .col:nth-child(2){
+    border-left: solid 1px $color-black;
+}
+.onlinedownload ul li{
+    &.icon_online01 a:before {
+        background: url(../images/icon_online01_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online02 a:before {
+        background: url(../images/icon_online02_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online03 a:before {
+        background: url(../images/icon_online03_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online04 a:before {
+        background: url(../images/icon_online04_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online05 a:before {
+        background: url(../images/icon_online05_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online06 a:before {
+        background: url(../images/icon_online06_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online07 a:before {
+        background: url(../images/icon_online07_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+}
+.function_panel{
+ .function{
+    ul{
+        li{
+            a{
+                &:hover, &:focus {
+                    background: $color-white;
+                    color: #FFF;
+                    &:before { filter: invert(0); }
+                }
+            }
+            &.print{
+                a:before {
+                    background: url(../images/icon/icon_print_b.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.keep{
+                a:before {
+                    background: url(../images/icon/icon_heart_b.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.back{
+                a:before {
+                    background: url(../images/icon/icon_back_b.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}   
+}
+
 
 }
 }
@@ -461,12 +730,7 @@ body{
      .cp blockquote, .tooltip span, table, table th, table td, .img_list>ul>li, .img_list2>ul>li, .content-area, .bookbrowsing ul li a, .upload_grp .pic{
         background: rgba(0, 0, 0, 0);
     }
-    .function_panel div.function ul li a{
-        background-color: $color-white!important;
-    }
-    .function_panel div.function ul li a:hover, .category a:hover, .category a:focus{
-        background-color: $color-black!important;
-    }
+
     .menu ul li ul{
         background: $color-black;
         li{
@@ -501,12 +765,6 @@ body{
 
  .cp blockquote, .tooltip span, table, table th, table td, .img_list>ul>li, .img_list2>ul>li, .content-area, .bookbrowsing ul li a, .upload_grp .pic{
     background: rgba(0, 0, 0, 0);
-}
-.function_panel div.function ul li a{
-    background-color: $color-white!important;
-    &:hover, &:focus{
-     background-color: $color-black!important;
- }
 }
 
 .category a:hover, .category a:focus{
