@@ -16,7 +16,7 @@
         margin: 10px auto;
         padding: 0;
         display: flex;
-        justify-content:center;
+        justify-content:star;
         flex-wrap:wrap;
         li {
             min-width: 40px;
@@ -37,6 +37,7 @@
                 // @include gradient (#F7F7F7, #EAEAEA, vertical);
                 background: #eee;
                 border: #ccc solid 1px;
+                text-align: center;
                 &:hover,
                 &:focus {
                     background: $primaryColor;
@@ -47,8 +48,8 @@
             &.active {
                 a {
                     color: #fff !important;
-                    background: $form-focus;
-                    border: darken($form-focus, 5) solid 1px;
+                    background: $primaryColor;
+                    border: darken($primaryColor, 5) solid 1px;
                 }
             }
             %arrow {

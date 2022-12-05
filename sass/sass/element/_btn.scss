@@ -84,7 +84,7 @@ $btn-radius:.2em;
 }
 .btn-yellow {
     // @extend %btn;
-    @include btn_setting(lighten($color-yellow, 5), #333);
+    @include btn_setting(lighten($color-yellow, 0), #333);
 }
 .btn-orange {
     // @extend %btn;
@@ -96,19 +96,19 @@ $btn-radius:.2em;
 }
 .btn-purple {
     // @extend %btn;
-    @include btn_setting(lighten($color-purple, 5), #FFF);
+    @include btn_setting(lighten($color-purple, 0), #FFF);
 }
 .btn-submit {
     // @extend %btn;
-    @include btn_setting(lighten($primaryColor, 5), #FFF);
+    @include btn_setting(lighten($primaryColor, 0), #FFF);
 }
 .btn-reset {
     // @extend %btn;
-    color:lighten($color-word,5);
+    color:lighten($color-word,0);
 }
 .btn-search {
     // @extend %btn;
-    @include btn_setting(lighten($primaryColor, 5), #FFF);
+    @include btn_setting(lighten($primaryColor, 0), #FFF);
 }
 // 主要按鈕
 .btn-primary{
