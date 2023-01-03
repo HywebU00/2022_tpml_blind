@@ -26,7 +26,8 @@
             margin: 0px auto;
             max-width: 18.75rem;
             float: left;
-            margin-right: 1em
+            margin-right: 1em;
+            font-size: 0;
         }
         @media screen and (max-width:545px) {
             .demo_wrap h1 {
@@ -75,7 +76,7 @@
 </head>
 <body>
     <div class="demo_wrap">
-        <h1><img src="images/logo.png" alt="">臺北市立圖書館 視障電子圖書館</h1>
+        <h1><img src="images/logo.svg" alt="">臺北市立圖書館 視障電子圖書館</h1>
         <div class="btn_grp">
             <a href="https://github.com/HywebU00/2022_tpml_blind.git" class="btn">切版檔案請按此下載</a>
         </div>
@@ -233,14 +234,14 @@
     <script src="vendor/jquery.easing.min.js"></script>
     <script src="js/hyui.js"></script>
     <script src="js/customize.js"></script>
-<!--     <script>
+    <script>
         $(function() {
             $('tbody').find('a').each(function(index, el) {
                 var Link = $(this).attr('href');
                 $(this).text(Link);
             });
         })
-    </script> -->
+    </script>
 </body>
 
 </html>
