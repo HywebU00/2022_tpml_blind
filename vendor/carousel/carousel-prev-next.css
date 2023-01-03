@@ -10,7 +10,7 @@ img.reload {
 
 .carousel {
 /*   background-color: #eee; */
-max-width: 900px;
+max-width: 56.25rem;
 margin: 2em auto 4em;
 }
 
@@ -30,7 +30,7 @@ margin: 2em auto 4em;
 .carousel .carousel-item {
   display: none;
   max-height: 400px;
-  max-width: 900px;
+  max-width: 56.25rem;
   position: relative;
   overflow: hidden;
   width: 100%;
