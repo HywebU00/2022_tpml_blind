@@ -34,7 +34,7 @@
 
 // 3、文字刪節號（ ../sass/mixins/_text-overflow.scss）
 @include text-overflow;						// 單行
-@include text-line(2,23px);					// 多行（行數、行高）
+@include text-line(2,1.4375rem);					// 多行（行數、行高）
 
 
 // 4、清除li格式（ ../sass/mixins/_li-reset.scss）

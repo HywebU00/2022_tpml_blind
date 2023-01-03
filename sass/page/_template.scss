@@ -77,8 +77,8 @@ body {
     }
     .left_block {
         flex: none;
-        flex-basis: 260px;
-        max-width: 260px;
+        flex-basis: 16.25rem;
+        max-width: 16.25rem;
         margin-right: 40px;
         &.hidden {
             +.center_block {

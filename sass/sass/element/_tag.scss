@@ -7,13 +7,13 @@ div.tag{
 
     &:before{
         content:"";
-        width:16px;
-        height: 16px;
+        width:1em;
+        height: 1em;
         position:absolute;
         left:0;
         top:1em;
         background:url(../images/basic/icon_tag.png) no-repeat center center;
-        background-size:16px;
+        background-size:1em;
     }
     ul{
         @include li-reset;

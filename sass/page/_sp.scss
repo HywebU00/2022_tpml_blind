@@ -224,8 +224,8 @@ h3{
 .num{
     text-align: center;
     @include screen('mobile') {
-       text-align: left; 
-   }
+     text-align: left; 
+ }
 }
 }
 
@@ -344,14 +344,14 @@ h3{
     padding: .5em 2em 1em;
     margin: 1em 0;
     @include screen('mobile') {
-     padding: 1em;   
- }
- .robert{
+       padding: 1em;   
+   }
+   .robert{
     text-align: center;
     width: 100%;
     img{
         width: 100%;
-        max-width: 400px;
+        max-width: 25rem;
     }
 }
 .notice{

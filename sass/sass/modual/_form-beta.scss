@@ -633,7 +633,7 @@ select::-ms-expand {
                     .checkbox {
                         border: solid 1px #c00;
                         width: auto;
-                        min-width: 100px;
+                        min-width: 6.25rem;
                         display: inline-block;
                         @include screen('xs_mobile') {
                             width: calc(100% - .6em);

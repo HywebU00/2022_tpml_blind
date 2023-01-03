@@ -18,7 +18,7 @@
     .function { flex:0 0 auto; }
     .publish_time {
         flex:1 1 auto;
-        min-width: 100px;
+        min-width: 6.25rem;
         display: block;
         color:#666;
         span{
@@ -33,11 +33,11 @@
         &:before {
             content: "";
             display: inline-block;
-            width: 12px;
-            height: 12px;
+            width: 0.75rem;
+            height: 0.75rem;
             top:.3em;
             background: url(../images/basic/icon_time.png) no-repeat center center;
-            background-size: 12px;
+            background-size: 0.75rem;
         }
     }
 }
@@ -116,31 +116,31 @@ div.function{
         flex: initial;
     }
     .function {
-        height: 32px;
+        height: 2rem;
         margin: 0;
         ul {
             display: flex;
             li {
                 font-size: 1em;
                 margin: 0 .2em;
-                flex:0 0 32px;
+                flex:0 0 2rem;
                 a {
                     display: block;
                     box-sizing: border-box;
-                    width: 32px;
-                    height: 32px;
+                    width: 2rem;
+                    height: 2rem;
                     text-align: center;
-                    line-height: 32px;
+                    line-height: 2rem;
                     border-radius: 50%;
                     background: #F1F1F1;
                     text-indent: -9999px;
                     position: relative;
                     @include screen('mobile') {
-                     width: 44px;
-                     height: 44px;
-                     line-height: 44px;  
-                 }
-                 &:hover, &:focus {
+                       width: 2.75rem;
+                       height: 2.75rem;
+                       line-height: 2.75rem;  
+                   }
+                   &:hover, &:focus {
                     background: $aHover;
                     color: #FFF;
                     &:before { filter: invert(100%); }
@@ -195,15 +195,15 @@ div.function{
         display: flex;
         li {
             margin: 0px 3px 3px;
-            flex:0 0 32px;
+            flex:0 0 2rem;
             a{
                 display:block;
-                height: 32px;
+                height: 2rem;
             }
             @include screen('tablet') {
                 margin: 0px 1px 2px;
-                width: 32px;
-                height: 32px;
+                width: 2rem;
+                height: 2rem;
             }
             img {
                 width: 100%;
@@ -217,15 +217,15 @@ div.function{
     .share {
         box-sizing: border-box;
         text-align: center;
-        height: 32px;
+        height: 2rem;
         margin: 0 4px;
         position:relative;
         a.shareButton{
             display: block;
             background: #F1F1F1;
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
+            width: 2rem;
+            height: 2rem;
             text-indent:-9999px;
             text-align: center;
             position: relative;
@@ -257,7 +257,7 @@ div.function{
           position: absolute;
           top: 2.5em;
           left: -6px;
-          // width: 44px;
+          // width: 2.75rem;
           padding: 6px;
           background: #FFF;
           box-shadow: 2px 2px 5px RGBA(0, 0, 0, .2);
@@ -279,8 +279,8 @@ div.function{
               background: transparent;
               display: block;
               padding: 0;
-              width: 32px;
-              height: 32px;
+              width: 2rem;
+              height: 2rem;
               &:hover, &:focus {
                 background: transparent;
                 img {

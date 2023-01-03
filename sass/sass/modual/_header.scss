@@ -24,13 +24,13 @@
         pointer-events: none;
         z-index: -1;
         @include screen('mobile') {
-            height: 60px;
+            height: 3.75rem;
         }
     }
     // mobile btn for extend
     %mobileCtrlBtn {
-        width: 60px !important;
-        height: 60px !important;
+        width: 3.75rem !important;
+        height: 3.75rem !important;
         position: absolute;
         top: 0px;
         display: block;
@@ -62,7 +62,7 @@
             border-radius: 0px 0px 30px 30px;  
         }
         @include screen('mobile') {
-            min-height: 60px;
+            min-height: 3.75rem;
         }
         .sidebarCtrl {
             display: none;
@@ -98,8 +98,8 @@
             font-size: 0;
             @extend %mobileCtrlBtn;
             &:before {
-                width: 40px;
-                height: 40px;
+                width: 2.5rem;
+                height: 2.5rem;
                 background: url(../images/basic/icon_search.png) no-repeat center center;
                 background-size: 28px;
                 // opacity: 0.6;
@@ -206,7 +206,7 @@
                     right:-.2em;
                 }
                 &:last-child{
-                   &:before{
+                 &:before{
                     display: none;
                 }  
             }
@@ -216,7 +216,7 @@
         .language {
             flex-grow: 0;
             flex-shrink: 1;
-            flex-basis: 140px;
+            flex-basis: 8.75rem;
             display: flex;
             flex-flow: row wrap;
             align-items: center;
@@ -238,9 +238,9 @@
     right: 3.8%;
     top:5.5em;
     @include screen('tablet') {
-       right: 2%;   
-   }
-   @include screen('mobile') {
+     right: 2%;   
+ }
+ @include screen('mobile') {
     display: none;
 }
 label {
@@ -468,7 +468,7 @@ label {
                     right:-.5em;
                 }
                 &:last-child{
-                   &:before{
+                 &:before{
                     display: none;
                 }  
             }
@@ -494,10 +494,10 @@ label {
         padding-top: .3em;
     }
     ul {
-     @include li-reset;
-     display: flex;
-     flex: 0 0 6em;
-     li {
+       @include li-reset;
+       display: flex;
+       flex: 0 0 6em;
+       li {
         font-size: 1em;
         flex:0 0 auto;
         margin: 2px;
