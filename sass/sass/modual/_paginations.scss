@@ -19,11 +19,11 @@
         justify-content:star;
         flex-wrap:wrap;
         li {
-            min-width: 40px;
-            height: 40px;
+            min-width: 2.5rem;
+            height: 2.5rem;
             margin: 2px;
             list-style: none;
-            flex:0 0 40px;
+            flex:0 0 2.5rem;
 
             box-sizing: border-box;
             a {
@@ -57,8 +57,8 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                width: 6px;
-                height: 6px;
+                width: 0.375rem;
+                height: 0.375rem;
                 margin-top: -4px;
                 border: 2px solid #666;
                 border-left: none;

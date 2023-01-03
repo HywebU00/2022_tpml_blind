@@ -2,13 +2,13 @@
 .modal {
     position: fixed;
     display: none;
-    width: 400px;
-    height: 300px;
+    width: 25rem;
+    height: 18.75rem;
     background: #FFF;
     z-index: 99999999;
     top: 5%;
     left: 50%;
-    margin-left: -200px;
+    margin-left: -12.5rem;
     padding: 1em 1em 1em;
     box-sizing: border-box;
     border-radius:8px;
@@ -22,9 +22,9 @@
         position: absolute;
         top: 5px;
         right: 5px;
-        width: 30px !important;
+        width: 1.875rem !important;
         min-width: auto;
-        height: 30px;
+        height: 1.875rem;
         font-size: 0em;
         border: none;
         display: block;

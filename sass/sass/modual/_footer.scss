@@ -33,10 +33,10 @@ footer {
             flex:1 1 100%;
         }
         .flogo{
-            max-width: 240px;
+            max-width: 15rem;
             margin-top:.45rem;
             @include screen('tablet') {
-                max-width: 200px;
+                max-width: 12.5rem;
             }
             @include screen('mobile') {
             }
@@ -72,10 +72,10 @@ footer {
             } 
         }
         img {
-            max-width: 120px;
+            max-width: 7.5rem;
         }
     }
-    @media screen and (max-width: 879px) {
+    @media screen and (max-width: 54.93rem) {
         top:3em;
         right:2em;  
     }
@@ -178,7 +178,7 @@ p {
 //         }
 //     }
 //     img {
-//         max-width: 120px;
+//         max-width: 7.5rem;
 //     }
 // }
 div.Copyright{

@@ -87,15 +87,15 @@ kbd{
         a {
             display: block;
             text-align: center;
-            line-height: 32px;
+            line-height: 2rem;
             border-radius: 50%;
             background: rgb(226,226,226);
             background: -moz-linear-gradient(180deg, rgba(226,226,226,1) 0%, rgba(199,199,199,1) 100%);
             background: -webkit-linear-gradient(180deg, rgba(226,226,226,1) 0%, rgba(199,199,199,1) 100%);
             background: linear-gradient(180deg, rgba(226,226,226,1) 0%, rgba(199,199,199,1) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2e2e2",endColorstr="#c7c7c7",GradientType=1);
-            width: 32px;
-            height: 32px;
+            width: 2rem;
+            height: 2rem;
             color: #333;
             &:hover, &:focus {
                 background: $aHover;
@@ -126,9 +126,9 @@ kbd{
         font-size: 1.25em;
         li{
             a{
-                line-height: 44px;
-                width: 44px;
-                height: 44px;
+                line-height: 2.75rem;
+                width: 2.75rem;
+                height: 2.75rem;
                 &:hover, &:focus {
                     background: $linkColor;
                     color: #FFF;

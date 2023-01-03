@@ -1,10 +1,10 @@
 .demo_fixed_sidebar {
-    min-height: 300px;
+    min-height: 18.75rem;
 }
 .fixed_sidebar {
     background: RGBA(0, 0, 0, .6);
-    width: 50px;
-    min-height: 200px;
+    width: 3.125rem;
+    min-height: 12.5rem;
     position: fixed;
     z-index: 999;
     right: 0;
@@ -16,14 +16,14 @@
         margin: 0;
         padding: 0;
         li {
-            width: 50px;
-            height: 50px;
+            width: 3.125rem;
+            height: 3.125rem;
             list-style: none;
             a {
                 display: block;
                 padding: 0;
-                height: 50px;
-                line-height: 50px;
+                height: 3.125rem;
+                line-height: 3.125rem;
                 position: relative;
                 text-align: center;
                 font-weight: bold;
@@ -37,8 +37,8 @@
                     text-align: left;
                     right: -10em;
                     padding: 0 1em 0 1em;
-                    height: 50px;
-                    line-height: 50px;
+                    height: 3.125rem;
+                    line-height: 3.125rem;
                     background: #00A688;
                     color: #FFF;
                     font-size: 1em;

@@ -170,13 +170,13 @@ table {
         table {
             width: 100%;
             // display:none;
-            min-width: 600px;
+            min-width: 37.5rem;
         }
     }
 }
 
 .scroltable {
-    min-width: 600px !important;
+    min-width: 37.5rem !important;
 }
 
 .scroltable-wrapper {
@@ -193,7 +193,7 @@ table {
 .scroltable-nav {
     display: none;
     position: absolute;
-    width: 60px;
+    width: 3.75rem;
     height: 100%;
     cursor: pointer;
     z-index: 9;
@@ -215,8 +215,8 @@ table {
             position: absolute;
             top: 0em;
             left: -.2em;
-            width: 30px;
-            height: 30px;
+            width: 1.875rem;
+            height: 1.875rem;
             background: url(../vendor/scrolltable/images/arrow-left.png) no-repeat 10px center;
             content: "";
             z-index: 2;
@@ -241,8 +241,8 @@ table {
             position: absolute;
             top: 0em;
             right: -.2em;
-            width: 30px;
-            height: 30px;
+            width: 1.875rem;
+            height: 1.875rem;
             background: url(../vendor/scrolltable/images/arrow-right.png) no-repeat right 10px center;
             content: "";
             z-index: 2;
