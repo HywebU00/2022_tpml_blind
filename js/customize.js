@@ -204,10 +204,13 @@ $(function() {
     $('.mpfun>ul>li>a').click(function() {
         $(this).siblings('.readset').slideToggle();
     })
-    _navlistChild.children('a').keyup(function() {
-        $(this).siblings('.readset').fadeIn();
-    });
-    _navlistChild.find('.text_contrast li:last>a').focusout(function() {
+    // _navlistChild.children('a').keyup(function() {
+    //     $(this).siblings('.readset').fadeIn();
+    // });
+    // _navlistChild.find('.text_contrast li:last>a').focusout(function() {
+    //     $(this).parents('.readset').hide();
+    // });
+    _navlistChild.find('button:last').focusout(function() {
         $(this).parents('.readset').hide();
     });
     $('.close_btn').click(function() {
