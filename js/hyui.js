@@ -27,8 +27,8 @@ $(function() {
     /*-----------------------------------*/
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
-    _body.prepend(
-        '<aside class="sidebar"><div class="m_area"><button type="button" class="sidebarClose">關閉</button></div><div class="menu_overlay"></div></aside>'
+    $('.header').after(
+        '<aside class="sidebar"><button type="button" class="sidebarClose">關閉</button><div class="m_area"></div><div class="menu_overlay"></div></aside>'
         );
     $('header .container').prepend(
         '<button type="button" class="searchCtrl">查詢</button><button type="button" class="sidebarCtrl">側欄選單</button>'
@@ -49,7 +49,8 @@ $(function() {
         _mArea.show().addClass('open');
         _mArea.animate({ 'margin-left': 0 }, 400, 'easeOutQuint');
         _body.addClass('noscroll');
-        $('.m_area .menu li:first-child>a').focus();//跳進行動版選單
+        $('.m_area .sidebarClose').focus();//跳進行動版選單
+
         _overlay.fadeIn();
         $('.m_search').hide();
         search_mode = false;
@@ -66,11 +67,15 @@ $(function() {
         liHasChild.children('ul').hide();
     }
     // -------------------------------------------- 打開選單動作
+
     _sidebarCtrl.off().click(function(e) {
         showSidebar();
         e.preventDefault();
 
     });
+
+
+
     // -------------------------------------------- overlay關閉選單
     _overlay
     .add(_sidebarClose)
@@ -126,10 +131,15 @@ $(function() {
     // _nav.clone().prependTo(_mArea);
     _menu.clone().prependTo(_mArea);
     _megamenu.clone().prependTo(_mArea);
-    _search.clone().prependTo(_body).removeClass('search').addClass('m_search');
+    // _search.clone().prependTo(_body).removeClass('search').addClass('m_search');
+    _search.clone().insertAfter('.searchCtrl').removeClass('search').addClass('m_search');
+    // _nav.clone().prependTo($('.m_search'));
+    // _sidebar.clone().insertAfter('.sidebarCtrl');
     _nav.clone().appendTo($('.m_search'));
+
     $( ".m_search .font_size" ).after( $( ".m_search .navlist" ) );
     $( ".searchCtrl" ).before( $( "h1" ) );
+
 
     var liHasChild_level1 = $('aside .menu ul').children('li.hasChild'),
     liHasChild_level2 = $('aside .menu ul ul').children('li.hasChild'),
@@ -232,6 +242,8 @@ $(function() {
             $('.sclose_btn').click(function() {
                 $(this).parent('.m_search').hide();
             })
+            // 
+
 
         } else {
             /*-----------------------------------*/

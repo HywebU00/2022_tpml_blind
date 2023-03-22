@@ -96,7 +96,7 @@
                     ul {
                         margin: 0 0 20px;
                         padding: 0!important;
-                         background: #fff;
+                        background: #fff;
                         li {
                             margin: 0;
                             padding: 0;
@@ -385,8 +385,10 @@
         height: 3em !important;
         padding: 0;
         min-width: auto;
-        top: 0px;
-        right: 0px;
+        top: 2px;
+        right: auto;
+        left:calc(280px - 3em);
+        z-index: 999999;
         margin: 0;
         text-indent: -9999px;
         border: none;
@@ -403,6 +405,10 @@
             transform: rotate(45deg);
             border-right: none;
             border-top: none;
+        }
+        &:focus{
+            // background-color:red;
+            border: dashed 2px $aFocus;
         }
     }
 }
