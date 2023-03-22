@@ -28,7 +28,7 @@ $(function() {
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
     $('.header').after(
-        '<aside class="sidebar"><button type="button" class="sidebarClose">關閉</button><div class="m_area"></div><div class="menu_overlay"></div></aside>'
+        '<aside class="sidebar"><button type="button" class="sidebarClose">關閉</button><div class="m_area"></div><div class="menu_overlay"></div><button type="button" class="sidebarClose">關閉</button></aside>'
         );
     $('header .container').prepend(
         '<button type="button" class="searchCtrl">查詢</button><button type="button" class="sidebarCtrl">側欄選單</button>'
@@ -85,10 +85,12 @@ $(function() {
     });
     _overlay.off('mouseenter');
     // -------------------------------------------- 無障礙tab設定，手機版menu離開最後一個選項後關閉
-    _mArea.find('.sidebarClose').focusout(function() {
-        hideSidebar();
-        $('h1>a').focus();
-    });
+    // _mArea.find('.sidebarClose').focusout(function() {
+    //     hideSidebar();
+    //     $('h1>a').focus();
+    // });
+    // _overlay.off("mouseenter");
+    
     _overlay.off("mouseenter");
     // -------------------------------------------- menu
     liHasChild.children('a').keyup(function() {
