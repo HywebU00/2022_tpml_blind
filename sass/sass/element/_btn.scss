@@ -163,7 +163,7 @@ $btn-radius:.2em;
 }
 
 .disabled, [disabled] {
-    opacity: .5;
+    opacity: 1;
     cursor: not-allowed!important;
     text-shadow:none;
 }
